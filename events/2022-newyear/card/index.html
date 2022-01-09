@@ -11,9 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bot.yuslife.cc/2021newyear/">
   <meta property="og:image" content="https://bot.yuslife.cc/2021newyear/img/og.png">
-  <title>
-    虎虎生風賀福氣｜於是寫下生活筆記
-  </title>
+  <title>虎虎生風賀福氣｜於是寫下生活筆記</title>
   <link rel="stylesheet" href="./src/style/style.css">
   <!-- Google Tag Manager -->
   <script>
@@ -61,20 +59,26 @@
     </div>
     <div id="make-card">
       <div class="card_design">
-        <h3>
-          輸入好友名稱（限 10 字）
-        </h3>
-        <input class="input-text" type="textarea" id="friend_name" placeholder="王大明"
-        maxlength="10" required="required">
-        <h3>
-          你想對他說什麼？（限 45 字）
-        </h3>
+        <h3>選擇賀卡卡面</h3>
+        <div class="radio-group">
+          <input type="radio" name="card_design" value="01" id="card_design_01" class="radio-input radio-input-01">
+          <label for="card_design_01" class="card_01 card">
+            <img src="/src/image/2022newyear_header.png" alt="" class="card_design_photo">
+          </label>
+        </div>
+        <div class="radio-group">
+          <input type="radio" name="card_design" value="01" id="card_design_02" class="radio-input radio-input-02">
+          <label for="card_design_02" class="card_02 card">
+            <img src="/src/image/2022newyear_header.png" alt="" class="card_design_photo">
+          </label>
+        </div>
+        <h3>輸入好友名稱（限 10 字）</h3>
+        <input class="input-text" type="textarea" id="friend_name" placeholder="王大明" maxlength="10" required="required">
+        <h3>你想對他說什麼？（限 45 字）</h3>
         <input class="input-text" type="textarea" id="friend_card" placeholder="在這裡祝福你新年快樂、牛年行大運、牛轉乾坤、事業步步高升！"
-        maxlength="45" required="required">
+          maxlength="45" required="required">
       </div>
-      <button id="submit">
-        將賀卡分享給好友
-      </button>
+      <button id="submit">將賀卡分享給好友</button>
     </div>
     <div class="money">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
@@ -88,19 +92,11 @@
       </script>
     </div>
     <div id="notify">
-      <h4>
-        注意事項
-      </h4>
+      <h4>注意事項</h4>
       <ul>
-        <li>
-          本活動由「於是寫下生活筆記」舉辦，為確保能透過 LINE 發送您的賀卡，因此需要您授權登入您的 LINE 帳號。
-        </li>
-        <li>
-          本活動圖片版權為本網站所有，未經授權不得盜用。
-        </li>
-        <li>
-          本網站保留隨時變更、終止或取消一部或全部本活動之權利及本活動注意事項之最終解釋權。詳細活動辦法以本活動網頁公告為準。
-        </li>
+        <li>本活動由「於是寫下生活筆記」舉辦，為確保能透過 LINE 發送您的賀卡，因此需要您授權登入您的 LINE 帳號。</li>
+        <li>本活動圖片版權為本網站所有，未經授權不得盜用。</li>
+        <li>本網站保留隨時變更、終止或取消一部或全部本活動之權利及本活動注意事項之最終解釋權。詳細活動辦法以本活動網頁公告為準。</li>
       </ul>
     </div>
     </div>
@@ -108,6 +104,10 @@
   <footer>
     <p>Copyright © 2022 All rights reserved by 育學</p>
   </footer>
+  <script src='https://static.line-scdn.net/liff/edge/2/sdk.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  <script src="/src/script/script.js"></script>
 </body>
 
 </html>

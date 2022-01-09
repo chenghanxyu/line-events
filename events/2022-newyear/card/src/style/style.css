@@ -94,6 +94,30 @@ section{
     margin: 15px 5px;
 }
 
+.card_design_photo{
+    width: 100%;
+}
+
+.radio-input{
+    visibility: hidden;
+}
+
+.card{
+    filter: brightness(0.9);
+}
+
+.card img{
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+.radio-input-01:checked ~ .card_01{
+    filter: brightness(1);
+}
+
+.radio-input-02:checked ~ .card_02{
+    filter: brightness(1);
+}
+
 #make-card .input-text,#make-card .input-text::selection{
     margin: auto;
     width: 95%;
