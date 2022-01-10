@@ -1,15 +1,15 @@
 var liffID = '1655224755-grRwnek2';
 liff.init({
   liffId: liffID
-}).then(function() {
+}).then(function () {
   console.log('LIFF init');
   // 取得基本環境資訊
   let language,
-  version,
-  isInClient,
-  isLoggedIn,
-  os,
-  lineVersion;
+    version,
+    isInClient,
+    isLoggedIn,
+    os,
+    lineVersion;
 
   language = liff.getLanguage();
   version = liff.getVersion();
@@ -17,7 +17,7 @@ liff.init({
   isLoggedIn = liff.isLoggedIn();
   os = liff.getOS();
   lineVersion = liff.getLineVersion();
-  
+
   // if(!isLoggedIn) {
   //         liff.login({
   //           redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
@@ -47,7 +47,18 @@ liff.init({
   //從這邊
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
-    let photo = $('input[type=radio]').value;
+
+    function getRadioBoxValue(card_design) {
+      var obj = document.getElementsByName(card_design); //這個是以標籤的name來取控制元件
+      for (i = 0; i < obj.length; i) {
+        if (obj[i].checked) {
+          return obj[i].value;
+        }
+      }
+      return "undefined";
+    }
+
+    let photo = obj[i].value;
     console.log(photo)
     let message = document.getElementById('friend_card').value;
     let name = document.getElementById('friend_name').value;
@@ -181,43 +192,43 @@ liff.init({
         }
       }
     }]).then(res => {
-        Swal.fire({
-              title: '送出賀卡',
-              icon: 'success',
-              confirmButtonText: '確認',
-              closeOnConfirm: false
-            }).then(function(isConfirmed){
-                liff.closeWindow();
-            }
-                )
-        // window.alert('已送出賀卡');
-        // liff.closeWindow();
+      Swal.fire({
+        title: '送出賀卡',
+        icon: 'success',
+        confirmButtonText: '確認',
+        closeOnConfirm: false
+      }).then(function (isConfirmed) {
+        liff.closeWindow();
+      }
+      )
+      // window.alert('已送出賀卡');
+      // liff.closeWindow();
     }).catch(error => {
-        Swal.fire({
-              title: '發送失敗',
-              text: '請確認是否輸入好友名稱及你想說的話',
-              icon: 'error',
-              confirmButtonText: '確認',
-              footer: '若持續發生錯誤，請重開此視窗'
-            }
-            ).then(function(isConfirmed){
-            window.location.assign(window.location.href);
-            liff.openWindow({
-                  url: "https://bot.yuslife.cc/?events=2021newyear",
-                  external: false
-                });
-          })
-        
-        
-        
-        // window.alert("請輸入好友名稱及你想說的話");
-        // history.go(0);
-        // window.location.assign(window.location.href);
+      Swal.fire({
+        title: '發送失敗',
+        text: '請確認是否輸入好友名稱及你想說的話',
+        icon: 'error',
+        confirmButtonText: '確認',
+        footer: '若持續發生錯誤，請重開此視窗'
+      }
+      ).then(function (isConfirmed) {
+        window.location.assign(window.location.href);
+        liff.openWindow({
+          url: "https://bot.yuslife.cc/?events=2021newyear",
+          external: false
+        });
+      })
+
+
+
+      // window.alert("請輸入好友名稱及你想說的話");
+      // history.go(0);
+      // window.location.assign(window.location.href);
     });
   });
 
   //到這邊
 }).
-catch(function(error) {
-  console.log(error);
-});
+  catch(function (error) {
+    console.log(error);
+  });
