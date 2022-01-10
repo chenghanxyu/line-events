@@ -53,107 +53,131 @@ liff.init({
       type: 'flex',
       altText: "Hi! 新年快樂！" + userName + "為你捎來了新年祝福，快來一起將祝福分享出去吧！",
       contents: {
-  "type": "bubble",
-  "body": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [
-      {
-        "type": "image",
-        "gravity": "top",
-        "size": "full",
-        "aspectRatio": "10:11",
-        "aspectMode": "cover",
-        "url": "https://bot.yuslife.cc/events/2021newyear/img/card.png?v=1"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "size": "lg",
-            "weight": "bold",
-            "color": "#dc3629",
-            "contents": [
-              {
-                "type": "span",
-                "text": "給"
-              },
-              {
-                "type": "span",
-                "text": name
-              },
-              {
-                "type": "span",
-                "text": "："
-              }
-            ]
+        "type": "bubble",
+        "hero": {
+          "type": "image",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header.png",
+          "size": "full",
+          "aspectRatio": "16:9",
+          "aspectMode": "cover",
+          "action": {
+            "type": "uri",
+            "uri": "http://linecorp.com/"
           }
-        ],
-        "position": "absolute",
-        "offsetStart": "20px",
-        "offsetBottom": "145px"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "text",
-            "text": message,
-            "wrap": true,
-            "align": "center"
-          }
-        ],
-        "position": "absolute",
-        "margin": "none",
-        "spacing": "none",
-        "width": "258px",
-        "height": "80px",
-        "offsetBottom": "65px",
-        "justifyContent": "center",
-        "offsetStart": "22px"
-      },
-      {
-        "type": "box",
-        "layout": "vertical",
-        "contents": [
-          {
-            "type": "button",
-            "action": {
-              "type": "uri",
-              "label": "快來製作賀卡回送給好友吧",
-              "uri": "https://bot.yuslife.cc/?events=2021newyear"
+        },
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "image",
+              "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header.png",
+              "position": "absolute",
+              "size": "full",
+              "margin": "none",
+              "offsetTop": "none",
+              "offsetStart": "none",
+              "aspectRatio": "16:9"
             },
-            "style": "primary",
-            "height": "sm",
-            "color": "#dc3629"
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "hello, world",
+                  "contents": [
+                    {
+                      "type": "span",
+                      "text": "祝 "
+                    },
+                    {
+                      "type": "span",
+                      "text": name
+                    }
+                  ],
+                  "size": "lg",
+                  "color": "#BB2225",
+                  "weight": "bold"
+                },
+                {
+                  "type": "text",
+                  "text": message,
+                  "wrap": true,
+                  "color": "#BB2225"
+                }
+              ],
+              "margin": "xs",
+              "borderColor": "#BB2225",
+              "borderWidth": "3px",
+              "cornerRadius": "5px",
+              "paddingAll": "md",
+              "backgroundColor": "#FEE8B8"
+            }
+          ]
+        },
+        "footer": {
+          "type": "box",
+          "layout": "vertical",
+          "spacing": "sm",
+          "contents": [
+            {
+              "type": "button",
+              "style": "primary",
+              "height": "sm",
+              "action": {
+                "type": "uri",
+                "label": "我也要發賀卡",
+                "uri": "https://liff.eshare.pw/events/2022-newyear/"
+              },
+              "color": "#BB2225"
+            },
+            {
+              "type": "button",
+              "style": "secondary",
+              "height": "sm",
+              "action": {
+                "type": "uri",
+                "label": "前往於是寫下生活筆記",
+                "uri": "https://yuslife.cc"
+              },
+              "color": "#EABCBD",
+              "margin": "md"
+            },
+            {
+              "type": "button",
+              "style": "secondary",
+              "height": "sm",
+              "action": {
+                "type": "uri",
+                "label": "前往 CACU 卡庫",
+                "uri": "https://www.cacucacu.com/"
+              },
+              "color": "#EABCBD",
+              "margin": "md"
+            },
+            {
+              "type": "spacer",
+              "size": "sm"
+            }
+          ],
+          "flex": 0
+        },
+        "styles": {
+          "header": {
+            "backgroundColor": "#FEE8B8"
+          },
+          "hero": {
+            "backgroundColor": "#FEE8B8"
+          },
+          "body": {
+            "backgroundColor": "#FEE8B8"
+          },
+          "footer": {
+            "backgroundColor": "#FEE8B8"
           }
-        ],
-        "position": "absolute",
-        "width": "260px",
-        "offsetStart": "20px",
-        "offsetBottom": "20px"
+        }
       }
-    ],
-    "paddingAll": "0px"
-  },
-  "footer": {
-    "type": "box",
-    "layout": "vertical",
-    "contents": [],
-    "spacing": "none",
-    "margin": "none",
-    "paddingBottom": "none"
-  },
-  "styles": {
-    "footer": {
-      "backgroundColor": "#fee8b8",
-      "separator": false
-    }
-  }
-}
     }]).then(res => {
         Swal.fire({
               title: '送出賀卡',
