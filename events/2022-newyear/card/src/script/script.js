@@ -18,11 +18,11 @@ liff.init({
   os = liff.getOS();
   lineVersion = liff.getLineVersion();
   
-  if(!isLoggedIn) {
-          liff.login({
-            redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
-          });
-        }
+  // if(!isLoggedIn) {
+  //         liff.login({
+  //           redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
+  //         });
+  //       }
 
   var user = liff.getDecodedIDToken();
   var userID = user.sub;
@@ -48,6 +48,7 @@ liff.init({
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
     let photo = $('input[type=radio]').value;
+    console.log(photo)
     let message = document.getElementById('friend_card').value;
     let name = document.getElementById('friend_name').value;
     liff.shareTargetPicker([{
