@@ -47,7 +47,7 @@ liff.init({
   //從這邊
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
-    let photo = document.getElementsByClassName('radio-input').value;
+    let photo = $('input[type=radio]').value;
     let message = document.getElementById('friend_card').value;
     let name = document.getElementById('friend_name').value;
     liff.shareTargetPicker([{
@@ -129,7 +129,7 @@ liff.init({
               "action": {
                 "type": "uri",
                 "label": "我也要發賀卡",
-                "uri": "https://liff.eshare.pw/events/2022-newyear/"
+                "uri": "https://liff.line.me/1655224755-grRwnek2"
               },
               "color": "#BB2225"
             },
