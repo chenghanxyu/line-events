@@ -47,6 +47,7 @@ liff.init({
   //從這邊
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
+    let photo = document.getElementsByClassName('radio-input').value;
     let message = document.getElementById('friend_card').value;
     let name = document.getElementById('friend_name').value;
     liff.shareTargetPicker([{
@@ -56,7 +57,7 @@ liff.init({
         "type": "bubble",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header.png",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header" + photo + ".png",
           "size": "full",
           "aspectRatio": "16:9",
           "aspectMode": "cover",
