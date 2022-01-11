@@ -59,7 +59,7 @@ liff.init({
     //   return "undefined";
     // }
     
-    let photo = document.querySelector('[name=card_design]:checked')
+    let photo = document.querySelector('[name=card_design]:checked').value;
 
     // let photo = obj.value;
     console.log(photo)
