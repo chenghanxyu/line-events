@@ -58,7 +58,7 @@ liff.init({
       return "undefined";
     }
 
-    let photo = obj[i].value;
+    let photo = obj.value;
     console.log(photo)
     let message = document.getElementById('friend_card').value;
     let name = document.getElementById('friend_name').value;
