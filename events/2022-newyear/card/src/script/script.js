@@ -48,16 +48,18 @@ liff.init({
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
 
-    function getRadioBoxValue(card_design) {
-      var obj = document.getElementsByName(card_design); //這個是以標籤的name來取控制元件
-      for (i = 0; i < obj.length; i) {
-        if (obj[i].checked) {
-          photo = obj[i].value;
-          console.log(photo)
-        }
-      }
-      return "undefined";
-    }
+    // function getRadioBoxValue(card_design) {
+    //   var obj = document.getElementsByName(card_design); //這個是以標籤的name來取控制元件
+    //   for (i = 0; i < obj.length; i) {
+    //     if (obj[i].checked) {
+    //       photo = obj[i].value;
+    //       console.log(photo)
+    //     }
+    //   }
+    //   return "undefined";
+    // }
+    
+    let photo = document.querySelector('.radio-input:checked')
 
     // let photo = obj.value;
     console.log(photo)
