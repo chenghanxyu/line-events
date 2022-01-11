@@ -52,13 +52,14 @@ liff.init({
       var obj = document.getElementsByName(card_design); //這個是以標籤的name來取控制元件
       for (i = 0; i < obj.length; i) {
         if (obj[i].checked) {
-          return obj[i].value;
+          photo = obj[i].value;
+          console.log(photo)
         }
       }
       return "undefined";
     }
 
-    let photo = obj.value;
+    // let photo = obj.value;
     console.log(photo)
     let message = document.getElementById('friend_card').value;
     let name = document.getElementById('friend_name').value;
