@@ -99,7 +99,7 @@ section{
 }
 
 .radio-input{
-    visibility: hidden;
+    /* visibility: hidden; */
 }
 
 .card{
