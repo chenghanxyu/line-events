@@ -18,11 +18,11 @@ liff.init({
   os = liff.getOS();
   lineVersion = liff.getLineVersion();
 
-  // if(!isLoggedIn) {
-  //         liff.login({
-  //           redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
-  //         });
-  //       }
+  if(!isLoggedIn) {
+          liff.login({
+            redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
+          });
+        }
 
   var user = liff.getDecodedIDToken();
   var userID = user.sub;
