@@ -53,19 +53,16 @@ liff.init({
     var name = document.getElementById('friend_name').value;
     liff.shareTargetPicker([{
       type: 'flex',
-      altText: "Hi! 新年快樂！" + userName + "為你捎來了新年祝福，快來一起將祝福分享出去吧！",
+      altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說" + message,
       contents: {
         "type": "bubble",
+        "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header-" + photo + ".png",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header-" + photo +".png",
           "size": "full",
           "aspectRatio": "16:9",
-          "aspectMode": "cover",
-          "action": {
-            "type": "uri",
-            "uri": "http://linecorp.com/"
-          }
+          "aspectMode": "cover"
         },
         "body": {
           "type": "box",
@@ -73,7 +70,7 @@ liff.init({
           "contents": [
             {
               "type": "image",
-              "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header.png",
+              "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_bg01.png",
               "position": "absolute",
               "size": "full",
               "margin": "none",
@@ -87,7 +84,7 @@ liff.init({
               "contents": [
                 {
                   "type": "text",
-                  "text": "hello, world",
+                  "text": "",
                   "contents": [
                     {
                       "type": "span",
@@ -106,7 +103,8 @@ liff.init({
                   "type": "text",
                   "text": message,
                   "wrap": true,
-                  "color": "#BB2225"
+                  "color": "#BB2225",
+                  "margin": "lg"
                 }
               ],
               "margin": "xs",
@@ -114,56 +112,10 @@ liff.init({
               "borderWidth": "3px",
               "cornerRadius": "5px",
               "paddingAll": "md",
-              "backgroundColor": "#FEE8B8"
+              "backgroundColor": "#FEE8B8",
+              "paddingBottom": "lg"
             }
           ]
-        },
-        "footer": {
-          "type": "box",
-          "layout": "vertical",
-          "spacing": "sm",
-          "contents": [
-            {
-              "type": "button",
-              "style": "primary",
-              "height": "sm",
-              "action": {
-                "type": "uri",
-                "label": "我也要發賀卡",
-                "uri": "https://liff.line.me/1655224755-grRwnek2"
-              },
-              "color": "#BB2225"
-            },
-            {
-              "type": "button",
-              "style": "secondary",
-              "height": "sm",
-              "action": {
-                "type": "uri",
-                "label": "前往於是寫下生活筆記",
-                "uri": "https://yuslife.cc"
-              },
-              "color": "#EABCBD",
-              "margin": "md"
-            },
-            {
-              "type": "button",
-              "style": "secondary",
-              "height": "sm",
-              "action": {
-                "type": "uri",
-                "label": "前往 CACU 卡庫",
-                "uri": "https://www.cacucacu.com/"
-              },
-              "color": "#EABCBD",
-              "margin": "md"
-            },
-            {
-              "type": "spacer",
-              "size": "sm"
-            }
-          ],
-          "flex": 0
         },
         "styles": {
           "header": {
