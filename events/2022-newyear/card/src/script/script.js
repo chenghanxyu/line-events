@@ -187,7 +187,7 @@ liff.init({
         confirmButtonText: '確認',
         closeOnConfirm: false
       }).then(
-        var data = {
+        var data_new = {
           'entry.1803576788': userID,
           'entry.672554210': userName,
           'entry.1963645540': userPhoto,
@@ -199,7 +199,7 @@ liff.init({
         $.ajax({
           type: 'POST',
           url: 'https://docs.google.com/forms/u/0/d/e/1_HvSjJAGlOVS1zpb1bbt-HeWrMWq0rpHj7jNDg7J1wE/formResponse',
-          data: data,
+          data: data_new,
           contentType: 'application/json',
           dataType: 'jsonp',
         });

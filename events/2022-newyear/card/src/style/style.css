@@ -99,25 +99,12 @@ section{
 }
 
 .radio-input{
-    /* visibility: hidden; */
-}
-
-.card{
-    filter: brightness(0.9);
+    visibility: hidden;
 }
 
 .card img{
-    border: 1px solid #fee8b8;
+    border: 1px solid #e3cfa3;
 }
-
-/* .radio-input-01:checked ~ .card_01{
-    filter: brightness(1);
-}
-
-.radio-input-02:checked ~ .radio-input .card_02{
-    filter: brightness(1);
-    border: 1px solid white;
-} */
 
 .radio-input:checked ~ .card img{
     border: 1px solid #bb2225;
