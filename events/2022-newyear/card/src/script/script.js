@@ -186,7 +186,7 @@ liff.init({
         icon: 'success',
         confirmButtonText: '確認',
         closeOnConfirm: false
-      }).then(
+      }).then(function (isConfirmed) {
         var data_new = {
           'entry.1803576788': userID,
           'entry.672554210': userName,
@@ -203,7 +203,6 @@ liff.init({
           contentType: 'application/json',
           dataType: 'jsonp',
         });
-      ).then(function (isConfirmed) {
         liff.closeWindow();
       }
       )
