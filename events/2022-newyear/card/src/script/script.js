@@ -47,24 +47,10 @@ liff.init({
   //從這邊
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
-
-    // function getRadioBoxValue(card_design) {
-    //   var obj = document.getElementsByName(card_design); //這個是以標籤的name來取控制元件
-    //   for (i = 0; i < obj.length; i) {
-    //     if (obj[i].checked) {
-    //       photo = obj[i].value;
-    //       console.log(photo)
-    //     }
-    //   }
-    //   return "undefined";
-    // }
-    
-    let photo = document.querySelector('[name=card_design]:checked').value;
-
-    // let photo = obj.value;
+    var photo = document.querySelector('[name=card_design]:checked').value;
     console.log(photo)
-    let message = document.getElementById('friend_card').value;
-    let name = document.getElementById('friend_name').value;
+    var message = document.getElementById('friend_card').value;
+    var name = document.getElementById('friend_name').value;
     liff.shareTargetPicker([{
       type: 'flex',
       altText: "Hi! 新年快樂！" + userName + "為你捎來了新年祝福，快來一起將祝福分享出去吧！",
@@ -200,12 +186,27 @@ liff.init({
         icon: 'success',
         confirmButtonText: '確認',
         closeOnConfirm: false
-      }).then(function (isConfirmed) {
+      }).then(
+        var data = {
+          'entry.1803576788': userID,
+          'entry.672554210': userName,
+          'entry.1963645540': userPhoto,
+          'entry.60362750': userEmail,
+          'entry.1393178718': photo,
+          'entry.474465649': name,
+          'entry.28988405': message,
+        };
+        $.ajax({
+          type: 'POST',
+          url: 'https://docs.google.com/forms/u/0/d/e/1_HvSjJAGlOVS1zpb1bbt-HeWrMWq0rpHj7jNDg7J1wE/formResponse',
+          data: data,
+          contentType: 'application/json',
+          dataType: 'jsonp',
+        });
+      ).then(function (isConfirmed) {
         liff.closeWindow();
       }
       )
-      // window.alert('已送出賀卡');
-      // liff.closeWindow();
     }).catch(error => {
       Swal.fire({
         title: '發送失敗',
@@ -217,16 +218,10 @@ liff.init({
       ).then(function (isConfirmed) {
         window.location.assign(window.location.href);
         liff.openWindow({
-          url: "https://bot.yuslife.cc/?events=2021newyear",
+          url: "https://liff.eshare.pe/events/2022-newyear/",
           external: false
         });
       })
-
-
-
-      // window.alert("請輸入好友名稱及你想說的話");
-      // history.go(0);
-      // window.location.assign(window.location.href);
     });
   });
 
