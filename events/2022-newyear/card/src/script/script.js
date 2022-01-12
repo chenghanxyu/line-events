@@ -198,7 +198,7 @@ liff.init({
         };
         $.ajax({
           type: 'POST',
-          url: 'https://docs.google.com/forms/u/0/d/e/1_HvSjJAGlOVS1zpb1bbt-HeWrMWq0rpHj7jNDg7J1wE/formResponse',
+          url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLSe3_ZIjmqjHrbOnAyO2fiVW_mgblH4Jlada2ZGl5QxitdP8BA/formResponse',
           data: data_new,
           contentType: 'application/json',
           dataType: 'jsonp',
