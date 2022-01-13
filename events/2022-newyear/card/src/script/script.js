@@ -59,7 +59,7 @@ liff.init({
         "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header-" + photo +".png",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header.png",
           "size": "full",
           "aspectRatio": "16:9",
           "aspectMode": "cover"
@@ -70,13 +70,23 @@ liff.init({
           "contents": [
             {
               "type": "image",
+              "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_bg02.png",
+              "position": "absolute",
+              "size": "full",
+              "margin": "none",
+              "offsetStart": "none",
+              "aspectRatio": "192:30",
+              "offsetBottom": "none"
+            },
+            {
+              "type": "image",
               "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_bg01.png",
               "position": "absolute",
               "size": "full",
               "margin": "none",
               "offsetTop": "none",
               "offsetStart": "none",
-              "aspectRatio": "16:9"
+              "aspectRatio": "192:30"
             },
             {
               "type": "box",
@@ -84,7 +94,7 @@ liff.init({
               "contents": [
                 {
                   "type": "text",
-                  "text": "",
+                  "text": "hello, world",
                   "contents": [
                     {
                       "type": "span",
@@ -92,7 +102,7 @@ liff.init({
                     },
                     {
                       "type": "span",
-                      "text": name
+                      "text": "name"
                     }
                   ],
                   "size": "lg",
@@ -101,21 +111,21 @@ liff.init({
                 },
                 {
                   "type": "text",
-                  "text": message,
+                  "text": "messagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessage",
                   "wrap": true,
                   "color": "#BB2225",
                   "margin": "lg"
                 }
               ],
-              "margin": "xs",
+              "margin": "lg",
               "borderColor": "#BB2225",
               "borderWidth": "3px",
               "cornerRadius": "5px",
               "paddingAll": "md",
-              "backgroundColor": "#FEE8B8",
               "paddingBottom": "lg"
             }
-          ]
+          ],
+          "paddingBottom": "30px"
         },
         "styles": {
           "header": {
