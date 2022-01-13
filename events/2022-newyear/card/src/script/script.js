@@ -59,7 +59,7 @@ liff.init({
         "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header.png",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header"+ photo +".png",
           "size": "full",
           "aspectRatio": "16:9",
           "aspectMode": "cover"
@@ -142,7 +142,107 @@ liff.init({
           }
         }
       }
-    }]).then(res => {
+    },{
+      type: 'flex',
+      altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說" + message,
+      contents: {
+        "type": "bubble",
+        "size": "giga",
+        "body": {
+          "type": "box",
+          "layout": "vertical",
+          "contents": [
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "🧧 我也要發賀卡",
+                  "color": "#FEE8B8",
+                  "weight": "bold"
+                }
+              ],
+              "borderColor": "#BB2225",
+              "borderWidth": "2px",
+              "cornerRadius": "md",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "paddingAll": "md",
+              "backgroundColor": "#BB2225",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "https://liff.eshare.pw/events/2022-newyear/"
+              }
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "▶️ 前往 於是寫下生活筆記",
+                  "color": "#BB2225",
+                  "weight": "bold"
+                }
+              ],
+              "borderColor": "#BB2225",
+              "borderWidth": "2px",
+              "cornerRadius": "md",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "paddingAll": "md",
+              "margin": "lg",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "http://yuslife.cc"
+              }
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "text": "▶️ 前往 搭波呆 Doubledaigirl",
+                  "color": "#BB2225",
+                  "weight": "bold"
+                }
+              ],
+              "borderColor": "#BB2225",
+              "borderWidth": "2px",
+              "cornerRadius": "md",
+              "justifyContent": "center",
+              "alignItems": "center",
+              "paddingAll": "md",
+              "margin": "lg",
+              "action": {
+                "type": "uri",
+                "label": "action",
+                "uri": "https://www.instagram.com/doubledaigirl/"
+              }
+            }
+          ]
+        },
+        "styles": {
+          "header": {
+            "backgroundColor": "#FEE8B8"
+          },
+          "hero": {
+            "backgroundColor": "#FEE8B8"
+          },
+          "body": {
+            "backgroundColor": "#FEE8B8"
+          },
+          "footer": {
+            "backgroundColor": "#FEE8B8"
+          }
+        }
+      }
+    }
+  ]).then(res => {
       Swal.fire({
         title: '送出賀卡',
         icon: 'success',
