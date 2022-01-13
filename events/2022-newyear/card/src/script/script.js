@@ -18,11 +18,11 @@ liff.init({
   os = liff.getOS();
   lineVersion = liff.getLineVersion();
 
-  if(!isLoggedIn) {
-          liff.login({
-            redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
-          });
-        }
+  if (!isLoggedIn) {
+    liff.login({
+      redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
+    });
+  }
 
   var user = liff.getDecodedIDToken();
   var userID = user.sub;
@@ -102,7 +102,7 @@ liff.init({
                     },
                     {
                       "type": "span",
-                      "text": "name"
+                      "text": name
                     }
                   ],
                   "size": "lg",
@@ -111,7 +111,7 @@ liff.init({
                 },
                 {
                   "type": "text",
-                  "text": "messagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessagemessage",
+                  "text": message,
                   "wrap": true,
                   "color": "#BB2225",
                   "margin": "lg"
