@@ -53,13 +53,13 @@ liff.init({
     var name = document.getElementById('friend_name').value;
     liff.shareTargetPicker([{
       type: 'flex',
-      altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說" + message,
+      altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說：" + message,
       contents: {
         "type": "bubble",
         "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header"+ photo +".png",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header-"+ photo +".png",
           "size": "full",
           "aspectRatio": "16:9",
           "aspectMode": "cover"
@@ -85,7 +85,7 @@ liff.init({
               "size": "full",
               "margin": "none",
               "offsetTop": "none",
-              "offsetStart": "none",
+              "offsetEnd": "none",
               "aspectRatio": "192:30"
             },
             {
