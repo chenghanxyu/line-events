@@ -148,6 +148,12 @@ liff.init({
       contents: {
         "type": "bubble",
         "size": "giga",
+        "hero": {
+          "type": "image",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_logo.png",
+          "size": "full",
+          "aspectRatio": "192:60"
+        },
         "body": {
           "type": "box",
           "layout": "vertical",
@@ -224,7 +230,8 @@ liff.init({
                 "uri": "https://www.instagram.com/doubledaigirl/"
               }
             }
-          ]
+          ],
+          "margin": "none"
         },
         "styles": {
           "header": {
@@ -234,7 +241,8 @@ liff.init({
             "backgroundColor": "#FEE8B8"
           },
           "body": {
-            "backgroundColor": "#FEE8B8"
+            "backgroundColor": "#FEE8B8",
+            "separator": false
           },
           "footer": {
             "backgroundColor": "#FEE8B8"
