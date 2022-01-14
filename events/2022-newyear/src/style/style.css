@@ -62,10 +62,20 @@ section{
 }
 
 #header{
-    background-image: url(../image/2022newyear_header.png);
+    background-image: url(../image/2022newyear_header.jpg);
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 63.95%;
     background-size: cover;
+}
+
+.logo{
+    background-image: url(../image/2022newyear_web-logo.png);
+    width: 360px;
+    height: 56px;
+    background-size: cover;
+    margin: 0;
+    position: fixed;
+    left: calc(50% - 180px);
 }
 
 #info{
