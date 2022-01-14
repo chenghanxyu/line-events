@@ -59,7 +59,7 @@ liff.init({
         "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_header-"+ photo +".png",
+          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/card-"+ photo +".png",
           "size": "full",
           "aspectRatio": "16:9",
           "aspectMode": "cover"
