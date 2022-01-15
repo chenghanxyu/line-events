@@ -179,7 +179,7 @@ liff.init({
               "action": {
                 "type": "uri",
                 "label": "action",
-                "uri": "https://liff.eshare.pw/events/2022-newyear/"
+                "uri": "https://liff.line.me/1655224755-grRwnek2"
               }
             },
             {
