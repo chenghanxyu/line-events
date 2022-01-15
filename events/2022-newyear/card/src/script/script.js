@@ -51,6 +51,15 @@ liff.init({
     console.log(photo)
     var message = document.getElementById('friend_card').value;
     var name = document.getElementById('friend_name').value;
+
+    if(photo == "01"){
+      aspectRatio = "1:1";
+    }else if(photo == "02"){
+      aspectRatio = "1:1";
+    }else{
+      aspectRatio = "16:9";
+    }
+    console.log(aspectRatio)
     liff.shareTargetPicker([{
       type: 'flex',
       altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說：" + message,
@@ -61,7 +70,7 @@ liff.init({
           "type": "image",
           "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/card-"+ photo +".png",
           "size": "full",
-          "aspectRatio": "16:9",
+          "aspectRatio": aspectRatio,
           "aspectMode": "cover"
         },
         "body": {
