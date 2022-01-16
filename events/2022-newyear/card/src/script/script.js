@@ -51,6 +51,27 @@ liff.init({
     var photo = document.querySelector('[name=card_design]:checked').value;
     var message = document.getElementById('friend_card').value;
     var name = document.getElementById('friend_name').value;
+    if(name == ""){
+      Swal.fire({
+        title: '發送失敗',
+        text: '請確認是否輸入好友名稱',
+        icon: 'error',
+        confirmButtonText: '確認',
+        footer: '若持續發生錯誤，請重開此視窗'
+      }
+      )
+    }else if(message == ""){
+      Swal.fire({
+        title: '發送失敗',
+        text: '請確認是否輸入你想說的話',
+        icon: 'error',
+        confirmButtonText: '確認',
+        footer: '若持續發生錯誤，請重開此視窗'
+      }
+      )
+    }
+
+
     if(photo == "01"){
       aspectRatio = "1:1";
     }else if(photo == "02"){
@@ -316,7 +337,6 @@ liff.init({
   });
 
   //到這邊
-}).
-  catch(function (error) {
+}).catch(function (error) {
     console.log(error);
   });
