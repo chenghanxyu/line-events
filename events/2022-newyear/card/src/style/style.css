@@ -119,6 +119,10 @@ section{
     display: none;
 }
 
+.radio-input-none{
+    display: none;
+}
+
 .card img{
     border: 1px solid #e3cfa3;
 }

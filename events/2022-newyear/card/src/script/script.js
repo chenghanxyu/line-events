@@ -51,7 +51,7 @@ liff.init({
     var photo = document.querySelector('[name=card_design]:checked').value;
     var message = document.getElementById('friend_card').value;
     var name = document.getElementById('friend_name').value;
-    if (photo == undefined) {
+    if (photo == "none") {
       Swal.fire({
         title: '發送失敗',
         text: '請確認是否選取賀卡',
