@@ -1,5 +1,5 @@
 var liffID = '1655224755-grRwnek2';
-var webSite = 'https://liff.yuslife.cc/events/2022newyear/card/'
+var webSite = 'https://liff.yuslife.cc/events/2022-newyear/card/'
 liff.init({
   liffId: liffID
 }).then(function () {
