@@ -1,4 +1,5 @@
 var liffID = '1655224755-grRwnek2';
+var webSite = 'https://liff.yuslife.cc/events/2022newyear/card/'
 liff.init({
   liffId: liffID
 }).then(function () {
@@ -20,7 +21,7 @@ liff.init({
 
   if (!isLoggedIn) {
     liff.login({
-      redirectUri: 'https://liff.eshare.pw/events/2022-newyear/card/'
+      redirectUri: webSite
     });
   }
 
@@ -48,10 +49,8 @@ liff.init({
   const btnMessage = document.getElementById('submit');
   btnMessage.addEventListener('click', () => {
     var photo = document.querySelector('[name=card_design]:checked').value;
-    console.log(photo)
     var message = document.getElementById('friend_card').value;
     var name = document.getElementById('friend_name').value;
-
     if(photo == "01"){
       aspectRatio = "1:1";
     }else if(photo == "02"){
@@ -59,16 +58,15 @@ liff.init({
     }else{
       aspectRatio = "16:9";
     }
-    console.log(aspectRatio)
     liff.shareTargetPicker([{
       type: 'flex',
-      altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說：" + message,
+      altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說…",
       contents: {
         "type": "bubble",
         "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/card-"+ photo +".png",
+          "url": webSite + "src/image/card-" + photo + ".png",
           "size": "full",
           "aspectRatio": aspectRatio,
           "aspectMode": "cover"
@@ -78,24 +76,36 @@ liff.init({
           "layout": "vertical",
           "contents": [
             {
-              "type": "image",
-              "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_bg02.png",
-              "position": "absolute",
-              "size": "full",
-              "margin": "none",
-              "offsetStart": "none",
-              "aspectRatio": "192:30",
-              "offsetBottom": "none"
-            },
-            {
-              "type": "image",
-              "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_bg01.png",
-              "position": "absolute",
-              "size": "full",
-              "margin": "none",
-              "offsetTop": "none",
-              "offsetEnd": "none",
-              "aspectRatio": "192:30"
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "text",
+                  "contents": [
+                    {
+                      "type": "span",
+                      "text": userName
+                    },
+                    {
+                      "type": "span",
+                      "text": " 想對 "
+                    },
+                    {
+                      "type": "span",
+                      "text": name
+                    },
+                    {
+                      "type": "span",
+                      "text": " 說："
+                    }
+                  ],
+                  "size": "lg",
+                  "color": "#BB2225",
+                  "weight": "bold",
+                  "offsetStart": "45px"
+                }
+              ],
+              "offsetTop": "1px"
             },
             {
               "type": "box",
@@ -103,27 +113,9 @@ liff.init({
               "contents": [
                 {
                   "type": "text",
-                  "text": "hello, world",
-                  "contents": [
-                    {
-                      "type": "span",
-                      "text": "祝 "
-                    },
-                    {
-                      "type": "span",
-                      "text": name
-                    }
-                  ],
-                  "size": "lg",
-                  "color": "#BB2225",
-                  "weight": "bold"
-                },
-                {
-                  "type": "text",
                   "text": message,
                   "wrap": true,
-                  "color": "#BB2225",
-                  "margin": "lg"
+                  "color": "#BB2225"
                 }
               ],
               "margin": "lg",
@@ -131,7 +123,27 @@ liff.init({
               "borderWidth": "3px",
               "cornerRadius": "5px",
               "paddingAll": "md",
-              "paddingBottom": "lg"
+              "paddingBottom": "lg",
+              "offsetTop": "10px"
+            },
+            {
+              "type": "box",
+              "layout": "vertical",
+              "contents": [
+                {
+                  "type": "image",
+                  "url": userPhoto,
+                  "aspectRatio": "1:1"
+                }
+              ],
+              "cornerRadius": "100px",
+              "position": "absolute",
+              "width": "45px",
+              "height": "45px",
+              "offsetStart": "13px",
+              "offsetTop": "10px",
+              "borderColor": "#BB2225",
+              "borderWidth": "3px"
             }
           ],
           "paddingBottom": "30px"
@@ -159,7 +171,7 @@ liff.init({
         "size": "giga",
         "hero": {
           "type": "image",
-          "url": "https://liff.eshare.pw/events/2022-newyear/card/src/image/2022newyear_logo.png",
+          "url": webSite + "src/image/2022newyear_logo.png",
           "size": "full",
           "aspectRatio": "192:60"
         },
@@ -296,7 +308,7 @@ liff.init({
       ).then(function (isConfirmed) {
         window.location.assign(window.location.href);
         liff.openWindow({
-          url: "https://liff.eshare.pe/events/2022-newyear/",
+          url: "https://liff.line.me/1655224755-grRwnek2",
           external: false
         });
       })
