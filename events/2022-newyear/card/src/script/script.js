@@ -60,6 +60,7 @@ liff.init({
         footer: '若持續發生錯誤，請重開此視窗'
       }
       )
+      return;
     }else if(message == ""){
       Swal.fire({
         title: '發送失敗',
@@ -69,7 +70,8 @@ liff.init({
         footer: '若持續發生錯誤，請重開此視窗'
       }
       )
-    }
+      return;
+    }else{
 
 
     if(photo == "01"){
@@ -334,7 +336,7 @@ liff.init({
         });
       })
     });
-  });
+  }});
 
   //到這邊
 }).catch(function (error) {
