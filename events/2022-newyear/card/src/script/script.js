@@ -322,7 +322,7 @@ liff.init({
                 "action": {
                   "type": "uri",
                   "label": "action",
-                  "uri": "http://yuslife.cc"
+                  "uri": "http://yuslife.cc?openExternalBrowser=1"
                 }
               },
               "styles": {
@@ -366,7 +366,7 @@ liff.init({
                 "action": {
                   "type": "uri",
                   "label": "action",
-                  "uri": "https://www.instagram.com/doubledaigirl/"
+                  "uri": "https://www.instagram.com/doubledaigirl/?openExternalBrowser=1"
                 }
               },
               "styles": {
