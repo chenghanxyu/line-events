@@ -111,6 +111,7 @@ section{
     align-items:center;
     margin: 10px;
     text-decoration:none;
+    cursor: pointer;
 }
 
 .line-logo{

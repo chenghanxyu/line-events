@@ -1,5 +1,24 @@
+//先取得網址字串，假設此頁網址為「index.aspx?id=U001&name=GQSM」
+var url = location.href;
+
+//再來用去尋找網址列中是否有資料傳遞(QueryString)
+if (url.indexOf('?') != -1) {
+  var id = "";
+  //在此直接將各自的參數資料切割放進ary中
+  var ary = url.split('?')[1].split('&');
+  //此時ary的內容為：
+  //ary[0] = 'id=U001'，ary[1] = 'name=GQSM'
+
+  //下迴圈去搜尋每個資料參數
+  for (i = 0; i <= ary.length - 1; i++) {
+    //如果資料名稱為events的話那就把他取出來
+    if (ary[i].split('=')[0] == 'invited_id')
+      id = ary[i].split('=')[1];
+  }
+}
+
 var liffID = '1655224755-grRwnek2';
-var webSite = 'https://liff.yuslife.cc/events/2022-newyear/card/'
+var webSite = 'https://liff.yuslife.cc/events/2022-newyear/card/?s=abcd'
 liff.init({
   liffId: liffID
 }).then(function () {
@@ -231,7 +250,7 @@ liff.init({
                 "action": {
                   "type": "uri",
                   "label": "action",
-                  "uri": "https://liff.line.me/1655224755-grRwnek2"
+                  "uri": "https://liff.line.me/1655224755-grRwnek2?inveted_id=" + userID
                 }
               },
               {
@@ -317,6 +336,7 @@ liff.init({
             'entry.1393178718': photo,
             'entry.474465649': name,
             'entry.28988405': message,
+            'entry.809694179':id,
           };
           $.ajax({
             type: 'POST',
