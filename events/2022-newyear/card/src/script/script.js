@@ -225,108 +225,160 @@ liff.init({
         type: 'flex',
         altText: "Hi!" + userName + "為你捎來了新年祝福，他想對你說" + message,
         contents: {
-          "type": "bubble",
-          "size": "giga",
-          "hero": {
-            "type": "image",
-            "url": webSite + "src/image/2022newyear_logo.png",
-            "size": "full",
-            "aspectRatio": "192:60"
-          },
-          "body": {
-            "type": "box",
-            "layout": "vertical",
-            "contents": [
-              {
+          "type": "carousel",
+          "contents": [
+            {
+              "type": "bubble",
+              "size": "micro",
+              "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                   {
-                    "type": "text",
-                    "text": "🧧 我也要發賀卡",
-                    "color": "#FEE8B8",
-                    "weight": "bold"
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "立即做賀卡",
+                        "size": "sm",
+                        "align": "center",
+                        "weight": "bold",
+                        "color": "#fee8b8",
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": "抽 LINE Points",
+                        "size": "sm",
+                        "align": "center",
+                        "weight": "bold",
+                        "color": "#fee8b8",
+                        "wrap": true
+                      }
+                    ],
+                    "backgroundColor": "#bb2225",
+                    "cornerRadius": "500px",
+                    "paddingAll": "sm",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "borderColor": "#bb2225",
+                    "borderWidth": "2px"
                   }
                 ],
-                "borderColor": "#BB2225",
-                "borderWidth": "2px",
-                "cornerRadius": "md",
-                "justifyContent": "center",
-                "alignItems": "center",
-                "paddingAll": "md",
-                "backgroundColor": "#BB2225",
                 "action": {
                   "type": "uri",
                   "label": "action",
                   "uri": "https://liff.line.me/1655224755-grRwnek2?invited_id=" + userID
                 }
               },
-              {
+              "styles": {
+                "hero": {
+                  "backgroundColor": "#fee8b8"
+                },
+                "body": {
+                  "backgroundColor": "#fee8b8"
+                }
+              }
+            },
+            {
+              "type": "bubble",
+              "size": "micro",
+              "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                   {
-                    "type": "text",
-                    "text": "▶️ 前往 於是寫下生活筆記",
-                    "color": "#BB2225",
-                    "weight": "bold"
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "立即前往",
+                        "size": "sm",
+                        "align": "center",
+                        "weight": "bold",
+                        "color": "#bb2225",
+                        "wrap": true
+                      },
+                      {
+                        "type": "text",
+                        "text": "於是寫下生活筆記",
+                        "size": "sm",
+                        "align": "center",
+                        "weight": "bold",
+                        "color": "#bb2225",
+                        "wrap": true
+                      }
+                    ],
+                    "cornerRadius": "500px",
+                    "paddingAll": "sm",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "borderColor": "#bb2225",
+                    "borderWidth": "2px"
                   }
                 ],
-                "borderColor": "#BB2225",
-                "borderWidth": "2px",
-                "cornerRadius": "md",
-                "justifyContent": "center",
-                "alignItems": "center",
-                "paddingAll": "md",
-                "margin": "lg",
                 "action": {
                   "type": "uri",
                   "label": "action",
                   "uri": "http://yuslife.cc"
                 }
               },
-              {
+              "styles": {
+                "hero": {
+                  "backgroundColor": "#fee8b8"
+                },
+                "body": {
+                  "backgroundColor": "#fee8b8"
+                }
+              }
+            },
+            {
+              "type": "bubble",
+              "size": "micro",
+              "body": {
                 "type": "box",
                 "layout": "vertical",
                 "contents": [
                   {
-                    "type": "text",
-                    "text": "▶️ 前往 搭波呆 Doubledaigirl",
-                    "color": "#BB2225",
-                    "weight": "bold"
+                    "type": "box",
+                    "layout": "vertical",
+                    "contents": [
+                      {
+                        "type": "text",
+                        "text": "關注 搭波呆 Doubledaigirl",
+                        "size": "sm",
+                        "align": "center",
+                        "weight": "bold",
+                        "color": "#bb2225",
+                        "wrap": true
+                      }
+                    ],
+                    "cornerRadius": "500px",
+                    "paddingAll": "sm",
+                    "justifyContent": "center",
+                    "alignItems": "center",
+                    "borderColor": "#bb2225",
+                    "borderWidth": "2px"
                   }
                 ],
-                "borderColor": "#BB2225",
-                "borderWidth": "2px",
-                "cornerRadius": "md",
-                "justifyContent": "center",
-                "alignItems": "center",
-                "paddingAll": "md",
-                "margin": "lg",
                 "action": {
                   "type": "uri",
                   "label": "action",
                   "uri": "https://www.instagram.com/doubledaigirl/"
                 }
+              },
+              "styles": {
+                "hero": {
+                  "backgroundColor": "#fee8b8"
+                },
+                "body": {
+                  "backgroundColor": "#fee8b8"
+                }
               }
-            ],
-            "margin": "none"
-          },
-          "styles": {
-            "header": {
-              "backgroundColor": "#FEE8B8"
-            },
-            "hero": {
-              "backgroundColor": "#FEE8B8"
-            },
-            "body": {
-              "backgroundColor": "#FEE8B8",
-              "separator": false
-            },
-            "footer": {
-              "backgroundColor": "#FEE8B8"
             }
-          }
+          ]
         }
       }
       ]).then(res => {
