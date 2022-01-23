@@ -18,7 +18,7 @@ if (url.indexOf('?') != -1) {
 }
 
 var liffID = '1655224755-grRwnek2';
-var webSite = 'https://liff.yuslife.cc/events/2022-newyear/card/?s=abcd'
+var webSite = 'https://liff.yuslife.cc/events/2022-newyear/card/'
 liff.init({
   liffId: liffID
 }).then(function () {
@@ -40,7 +40,7 @@ liff.init({
 
   if (!isLoggedIn) {
     liff.login({
-      redirectUri: webSite
+      redirectUri: webSite + '?invited_id=' + id
     });
   }
 
