@@ -17,6 +17,14 @@ if (url.indexOf('?') != -1) {
   }
 }
 
+function openPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+
 var liffID = '1655224755-grRwnek2';
 var webSite = 'https://liff.yuslife.cc/events/2022-newyear/card/'
 liff.init({
@@ -336,7 +344,7 @@ liff.init({
             'entry.1393178718': photo,
             'entry.474465649': name,
             'entry.28988405': message,
-            'entry.809694179':id,
+            'entry.809694179': id,
           };
           $.ajax({
             type: 'POST',

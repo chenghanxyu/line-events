@@ -53,7 +53,7 @@ html{
 }
 
 
-section{
+section#main{
     width: 100%;
     max-width: 420px;
     margin: auto;
@@ -85,6 +85,17 @@ section{
     border: #bb2225 solid 3px;
     border-radius: 5px;
     line-height: 150%;
+}
+
+#event{
+    text-align: center;
+}
+
+#event h3{
+    font-size: 125%;
+    font-weight: bold;
+    color: #bb2225;
+    margin: 10px;
 }
 
 #make-card{
@@ -154,6 +165,74 @@ section{
 #notify a{
     color:#333;
     font-weight: bold;
+}
+
+.popupContent{
+    background:rgba(0,0,0,.4);
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+    vertical-align:middle;
+}
+
+.popup-content{
+    background-color: #fff;
+    width: 98%;
+    max-width: 360px;
+    margin: 50px auto;
+    padding: 15px 0;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    position: relative;
+}
+
+#popup .close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #333;
+    background-color: #fff;
+    border-radius: 100%;
+    text-align: center;
+    vertical-align: middle;
+    cursor:pointer;
+    font-size: 22px;
+}
+
+#popup h2{
+    font-size: 150%;
+    font-weight: bold;
+    margin: 15px;
+    color: #bb2225;
+}
+
+#popup h3{
+    font-size: 115%;
+    font-weight: 600;
+    margin: 15px;
+}
+
+#popup h4{
+    font-size: 102%;
+    font-weight: bold;
+    margin: 10px;
+}
+
+#popup p{
+    margin: 10px;
+}
+
+#popup li{
+    text-align: left;
+    display: list-item;
+    list-style-type: disc;
+    font-size: 90%;
+    margin: 5px 5px 5px 20px;
 }
 
 footer{
