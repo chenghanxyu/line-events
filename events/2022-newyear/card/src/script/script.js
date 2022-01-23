@@ -250,7 +250,7 @@ liff.init({
                 "action": {
                   "type": "uri",
                   "label": "action",
-                  "uri": "https://liff.line.me/1655224755-grRwnek2?inveted_id=" + userID
+                  "uri": "https://liff.line.me/1655224755-grRwnek2?invited_id=" + userID
                 }
               },
               {
